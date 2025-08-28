@@ -1,6 +1,6 @@
 {
   "name": "my-portfolio",
-  "homepage": " https://vaibhavcolt.github.io/My-Portfolio/",
+  "homepage": " https://vaibhavcolt.github.io/Portfolio/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -r https://github.com/vaibhavcolt/MY-Portfolio.git"
+    "deploy": "gh-pages -d dist -r https://github.com/vaibhavcolt/Portfolio.git"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
