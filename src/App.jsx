@@ -15,7 +15,7 @@ const router = createBrowserRouter(
     
   ],
 {
-     basename: '/My-Portfolio',
+     basename: '/Portfolio',
   });
 const App = () => {
   return (
