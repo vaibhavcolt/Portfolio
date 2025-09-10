@@ -1,47 +1,48 @@
-// src/components/Projects.jsx
 import React from 'react';
 import './Projects.css';
-import profilePic from "/src/assets/my profile photo.jpg"; // Ensure the path is correct
+import profilePic from "/src/assets/my profile photo.jpg"; 
+import car_rental from "/src/assets/Car Rental Website photo.jpeg";
 
 
 const projects = [
   {
     title: 'Car Rental System',
     description: "",
+    image: car_rental,
     features: [
       "•	Feature to authenticate users.",
-    "•  User can select location, data, and fule type and book there car accordingly.",
-  "•	Tech Stack: Java, Spring Boot, Spring Security, Hibernate, React.js.",
- ],
-
+      "•  User can select location, data, and fule type and book there car accordingly.",
+      "•	Tech Stack: Java, Spring Boot, Spring Security, Hibernate, React.js."],
     github: 'https://github.com/vaibhavcolt/Car-Rental-System-Full-Stack',
     live: '#',
-    tech: ['React', 'Java', 'Spring Boot', 'MySQL',"REST API"],
+    tech: ['React', 'Java', 'Spring Boot', 'MySQL', "REST API"],
   },
   {
     title: 'Online  Exam System',
-    description:"",
+    description: "",
+    image: "",
     features: [
       '•	Feature to enable users to take tests.',
       '•	Feature to capture test completion time.',
-      '•	Feature to enable text to voice in real time.' ,
+      '•	Feature to enable text to voice in real time.',
     ],
     github: '#',
     live: '#',
-    tech: ['Java', 'Spring Boot', 'Hibernate', 'MySQL', 'REST API','HTML', 'CSS', 'JavaScript'],
+    tech: ['Java', 'Spring Boot', 'Hibernate', 'MySQL', 'REST API', 'HTML', 'CSS', 'JavaScript'],
   },
   {
     title: 'Data Visualizer ',
-    description:"",
+    description: "",
+    image: "",
     features: [
-    ' •	Enable user to upload CSV/Excel files and visualize data dynamically',
-    '•	Support bar chart, line graph and pie charts.',
-    '•	Feature help non-technical users to understand data trend.',
-    '•	Tech Stack: HTML, CSS, JavaScript.',
+      ' •	Enable user to upload CSV/Excel files and visualize data dynamically',
+      '•	Support bar chart, line graph and pie charts.',
+      '•	Feature help non-technical users to understand data trend.',
+      '•	Tech Stack: HTML, CSS, JavaScript.',
     ],
     github: null,
     live: null,
-    tech: ['JavaScript','HTML', 'CSSs'],
+    tech: ['JavaScript', 'HTML', 'CSSs'],
   },
 ];
 
@@ -52,9 +53,9 @@ const Projects = () => {
       <div className="projects-grid">
         {projects.map((project, index) => (
           <div className="project-card" key={index}>
-           <div className="projects-image-container">
-        <img src={profilePic} alt="Projects Banner" className="projects-image" />
-      </div>
+            <div className="projects-image-container">
+              <img src={project.image} alt="Projects Banner" className="projects-image" />
+            </div>
             <h3 className="project-name">{project.title}</h3>
             <p className="project-description">{project.description}</p>
             <ul className="project-features">
@@ -66,15 +67,15 @@ const Projects = () => {
               <a href={project.github} target="_blank" rel="noopener noreferrer" onClick={console.log("Hello, World!")}>
                 <button >GitHub</button>
               </a>
-                
+
               {/* {project.live && (
                 <a href={project.live} target="_blank" rel="noopener noreferrer">
                   <button>Live</button>
                 </a>
               )} */}
-              
+
             </div>
-       
+
             <div className="project-tech">
               {project.tech.map((tech, i) => (
                 <span className="tech-tag" key={i}>

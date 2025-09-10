@@ -13,11 +13,11 @@ const LandingPg = () => {
     <div className='Landing-wrapper'>
       <Navbar />
       <div className="content-container">
-      <Home />
-      <About />
-      <Education />
-      <Projects />
-      <Contact />
+      <div id='home'><Home /></div>
+      <div id='about'><About /></div>
+      <div  id='education'> <Education /></div>
+      <div id='projects'><Projects /></div>
+      <div id='contact'><Contact /></div>
       {/* <Hero /> */}
       </div>
     </div>

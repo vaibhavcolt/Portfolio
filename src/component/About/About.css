@@ -26,7 +26,7 @@
     /* padding:10px; */
     font-size: 1rem;
     line-height: 1.6;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
 
 }
 
@@ -64,6 +64,17 @@
     /* position: ; */
 }
 
+.skills-tags span {
+  display: inline-block;
+  background-color: #222;
+  color: #fff;
+  padding: 6px 12px;
+  margin: 4px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+    margin-bottom: 2rem;
+
+}
 /* Simple floating animation */
 /* @keyframes float { */
     /* 0% {
