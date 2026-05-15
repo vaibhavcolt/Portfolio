@@ -1,94 +1,163 @@
-.projects-section {
-  margin: 20vh auto;
-  padding: 1rem;
+.projects-header {
   text-align: center;
-  /* width: 100%; */
-}
-
-.projects-image-container {
-  margin-bottom: 1.5rem;
-}
-
-.projects-image {
-  max-width: 100%;
-  height: auto;
-  width: 180px;
-  border-radius: 8px;
-}
-
-.projects-title {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  font-weight: 600;
-
+  margin-bottom: 60px;
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
 }
 
 .project-card {
-  /* background-color: #686666; */
-  background-color: #dbdbdb;
-
-  border-radius: 12px;
-  padding: 1.5rem;
-  max-width: 350px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-  transition: transform 0.3s ease;
-  /* position: relative; */
-  /* z-index: 0; */
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 32px 28px 28px;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* .project-card:hover {
-  transform: translateY(-5px);
-  scale: 1.02;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-} */
+.project-card:hover {
+}
 
-.project-name {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+.project-color-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 20px 20px 0 0;
+}
+
+.project-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.project-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--tag-bg);
+  border-radius: 12px;
+}
+
+.project-links {
+  display: flex;
+  gap: 12px;
+}
+
+.project-link {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: color 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.project-link:hover {
+  color: var(--accent);
+  background: var(--tag-bg);
+  border-color: var(--accent);
+}
+
+.project-github-link {
+  color: #24292e;
+  border-color: rgba(36, 41, 46, 0.3);
+  background: rgba(36, 41, 46, 0.08);
+  box-shadow: 0 0 10px rgba(36, 41, 46, 0.1);
+}
+
+.project-github-link:hover {
+  color: #fff;
+  background: #24292e;
+  border-color: #24292e;
+  box-shadow: 0 4px 16px rgba(36, 41, 46, 0.4);
+}
+
+[data-theme="dark"] .project-github-link {
+  color: #FAFAFA;
+  border-color: rgba(250, 250, 250, 0.2);
+  background: rgba(250, 250, 250, 0.06);
+  box-shadow: 0 0 10px rgba(250, 250, 250, 0.08);
+}
+
+[data-theme="dark"] .project-github-link:hover {
+  color: #fff;
+  background: #333;
+  border-color: #555;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.15);
+}
+
+.project-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 10px;
 }
 
 .project-description {
-  font-size: 1rem;
-  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 16px;
+  flex: 1;
 }
 
-.project-features {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 1rem;
-  text-align: left;
-}
-
-.project-features li {
-  margin-bottom: 0.5rem;
-}
-
-.project-buttons {
-  margin-bottom: 1rem;
-}
-
-.project-buttons button:hover {
-  background-color: #333;
-}
-
-.project-tech {
+.project-highlights {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem;
+  gap: 8px;
+  margin-bottom: 20px;
 }
 
-.tech-tag {
-  background-color: #333;
-  color: #f2f0ea;
-  padding: 0.3rem 0.7rem;
-  border-radius: 4px;
-  font-size: 0.85rem;
+.project-highlight {
+  padding: 4px 12px;
+  background: var(--tag-bg);
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 20px;
+  border: 1px solid var(--accent);
+}
+
+.project-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.tech-pill {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-family: 'Fira Code', monospace;
+  font-weight: 400;
+}
+
+.tech-pill::before {
+  content: "#";
+  color: var(--accent);
+  margin-right: 2px;
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }

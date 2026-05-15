@@ -1,27 +1,28 @@
-import React from 'react'
-import About from '../About/About'
-import Navbar from '../NavBar/Navbar'
-import Home from '../Home/Home'
-import Contact from '../Contact/Contact'
-import Projects from '../Project/Projects'
-import Education from '../Education/Education'
-import Hero from '../Hero'
-
+import Navbar from '../NavBar/Navbar';
+import Home from '../Home/Home';
+import About from '../About/About';
+import Experience from '../Experience/Experience';
+import Projects from '../Project/Projects';
+import Education from '../education/Education';
+import Contact from '../Contact/Contact';
+import Footer from '../Footer/Footer';
+import './LandingPg.css';
 
 const LandingPg = () => {
   return (
-    <div className='Landing-wrapper'>
+    <div className="landing-wrapper">
       <Navbar />
-      <div className="content-container">
-      <div id='home'><Home /></div>
-      <div id='about'><About /></div>
-      <div  id='education'> <Education /></div>
-      <div id='projects'><Projects /></div>
-      <div id='contact'><Contact /></div>
-      {/* <Hero /> */}
-      </div>
+      <main>
+        <Home />
+        <About />
+        <Experience />
+        <Projects />
+        <Education />
+        <Contact />
+      </main>
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default LandingPg
+export default LandingPg;
